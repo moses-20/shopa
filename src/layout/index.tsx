@@ -1,16 +1,17 @@
-import { PropsWithChildren } from "react";
 import Page from "material/page";
 import Main from "material/main";
-import Greeting from "widgets/greeting";
 import Topbar from "./topbar";
+import RoutePages from "routes";
+import { Container } from "@mui/material";
 
-function Layout({ children }: PropsWithChildren) {
+function Layout() {
   return (
     <Page>
       <Topbar />
       <Main>
-        {children}
-        <Greeting />
+        <Container>
+          <RoutePages />
+        </Container>
       </Main>
     </Page>
   );
